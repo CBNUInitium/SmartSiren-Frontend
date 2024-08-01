@@ -1,0 +1,133 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MapActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="SMARTSIREN"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.082" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="8dp">
+
+
+            <!-- 여유 공간 -->
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+
+            <!-- 검색 창 -->
+            <EditText
+                android:id="@+id/et_address_search"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext"
+                android:hint="신고하실 주소를 검색하세요."
+                android:paddingStart="16dp"
+                android:textColorHint="#ff000000"
+                android:textSize="17dp" />
+
+            <!-- 여유 공간 -->
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <!-- 주소 검색 버튼 -->
+            <android.widget.Button
+                android:id="@+id/btn_address_search"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/search" />
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="505dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="8dp">
+
+            <Space
+                android:layout_width="343dp"
+                android:layout_height="match_parent" />
+
+           <!-- 현재 위치로 이동 버튼 -->
+            <android.widget.Button
+                android:id="@+id/btn_current_location"
+                android:layout_width="56dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/location" />
+    </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/btn_report"
+            android:layout_width="320dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main_item_button"
+            android:backgroundTint="@color/material_dynamic_primary30"
+            android:text="위험 신고하기"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <include layout="@layout/activity_map_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
